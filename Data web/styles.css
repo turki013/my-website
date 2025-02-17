@@ -1,0 +1,269 @@
+/* 1. تنسيق عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif; /* أو أي خط عربي تحبه */
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+    direction: rtl; /* لأن الموقع بالعربي */
+  }
+  
+  /* 2. الهيدر + التنقل */
+  header {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #ff5722;
+  }
+  
+  /* 3. قسم الهيرو */
+  .hero {
+    background: url("assets/hero-bg.jpg") center/cover no-repeat;
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  .btn-cta {
+    background-color: #ff5722;
+    padding: 0.6rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e64a19;
+  }
+  
+  /* 4. قسم المقالة */
+  .article-section {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-section h2 {
+    margin-bottom: 1rem;
+    color: #ff5722;
+    font-size: 1.6rem;
+  }
+  
+  .article-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+  
+  .article-section h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .article-section h4 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  .article-section ul {
+    margin-bottom: 1rem;
+    list-style: circle inside;
+    padding-right: 1rem;
+  }
+  
+  .article-section ul li {
+    margin-bottom: 0.3rem;
+  }
+  
+  /* 5. قسم التواصل */
+  .contact-section {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+  }
+  
+  .contact-form label {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-submit {
+    padding: 0.8rem;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #e64a19;
+  }
+  
+  .form-status {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ff5722;
+  }
+  
+  /* 6. الفوتر الجديد (موحّد) */
+  .site-footer {
+    background-color: #f0f0f0; /* نفس خلفية الفوتر القديمة */
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;              /* نعتمد فليكس */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;            /* لو الشاشة صغرت، ينزل المحتوى تحت بعض */
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #333;         /* نفس لون النص العام */
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-content a:hover {
+    color: #ff5722;      /* نفس اللون البرتقالي */
+  }
+  
+  /* 7. الرسبونسيف */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #f0f0f0;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 1rem;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .navbar {
+      position: relative;
+    }
+  
+    .hero {
+      height: 50vh;
+    }
+  }
+  
